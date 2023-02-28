@@ -12,7 +12,7 @@ __Other components pending__
 
 
 ## Development
-Before the setup install `jq`, `bazelisk`, `docker` and `kubectl`.
+Before the setup install `jq`, `bazelisk`, `docker`, `kubectl`, and `helm`.
 A local Kubernetes cluster is also required. Docker Desktop is a good solution.
 
 
