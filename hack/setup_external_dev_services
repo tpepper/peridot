@@ -44,4 +44,7 @@ helm upgrade --install localstack localstack-repo/localstack
 helm install --set auth.rootUser=AKIAIOSFODNN7EXAMPLE,auth.rootPassword=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY minio bitnami/minio
 
 # Install Temporal
-helm install temporal infrastructure/dev-helm/temporal --timeout 15m -f infrastructure/dev-helm/temporal.values.yaml
+pushd infrastructure/dev-helm/temporal/
+helm dependencies update
+helm install temporal . --timeout 15m -f ../temporal.values.yaml
+popd
